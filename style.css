@@ -1,0 +1,32 @@
+:root {
+
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+    font-family: chomsky;
+    src: url(fonts/Chomsky.otf);
+}
+
+body {
+    background-color:darkslategray;
+}
+
+div.card {
+    background-color: aquamarine;
+    min-height:300px;
+    max-width:95%;
+    margin-inline: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+p.card {
+
+}
