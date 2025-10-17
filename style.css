@@ -18,25 +18,35 @@ body {
 
 div.card {
     background-color: aquamarine;
-    min-height:300px;
-    position: relative;
-    top: 50%;
-    transform: translateY(50%);
 
-    margin-inline: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    margin:0;
+    transform: translate(-50%, -50%);
+
+    padding: 2%;
+    padding-inline: 5%;
+    
+
+
+
 
     display: flex;
     flex-wrap:wrap;
     justify-content: center;
     align-items: center;
+    row-gap: 2em;
 }
 
 p.card {
     text-align: center;
+    font-size: 2vh;
 }
 
 h1.card {
-    font-size:36px;
+    font-size: 5vh;
     font-family: chomsky;
 }
 
@@ -61,8 +71,9 @@ h1.card {
     }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1280px) {
     div.card {
         width: 60%;
     }
 }
+
