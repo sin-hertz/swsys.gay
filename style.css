@@ -1,10 +1,13 @@
 :root {
-
+    --bg-color-1: rgba(77, 77, 77, 1);
+    --bg-color-2: rgb(99, 114, 93);
+    --accent-color: rgb(214, 228, 212);
 }
 
 * {
   margin: 0;
   box-sizing: border-box;
+
 }
 
 @font-face {
@@ -12,12 +15,18 @@
     src: url(fonts/Chomsky.otf);
 }
 
+@font-face {
+    font-family: iknowaghost;
+    src: url(fonts/iknowaghost.ttf);
+}
+
+
 body {
-    background-color:darkslategray;
+    background-color:var(--bg-color-1);
 }
 
 div.card {
-    background-color: aquamarine;
+    background-color: var(--bg-color-2);
 
     position: absolute;
     top: 50%;
@@ -42,12 +51,51 @@ div.card {
 
 p.card {
     text-align: center;
+    color: var(--accent-color);
+
     font-size: 2vh;
+    font-family: iknowaghost;
+    letter-spacing: -2px;
 }
 
 h1.card {
     font-size: 5vh;
     font-family: chomsky;
+    color: var(--accent-color);
+}
+
+img.song {
+    height: 100px;
+    width: 100px;
+    margin-right: 1vw;
+}
+
+div.song {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    padding: 1%;
+
+    display: flex;
+
+    background-color: var(--bg-color-2);
+}
+
+div.song-title {
+    display: flex;
+    background-color: var(--bg-color-2);
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+
+
+}
+
+p.song-title {
+
+    font-size: 2rem;
+    color: var(--accent-color);
+    font-family: iknowaghost;
 }
 
 
