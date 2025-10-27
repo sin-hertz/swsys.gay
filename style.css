@@ -1,7 +1,7 @@
 :root {
-    --bg-color-1: rgba(77, 77, 77, 1);
-    --bg-color-2: rgb(99, 114, 93);
-    --accent-color: rgb(214, 228, 212);
+    --bg-color-1: rgb(201, 144, 97);
+    --bg-color-2: rgb(214, 185, 172);
+    --accent-color: rgb(94, 110, 89);
 }
 
 * {
@@ -38,8 +38,8 @@ div.card {
     padding: 2%;
     padding-inline: 5%;
     
-
-
+    border: 0.5vh solid var(--accent-color);
+    border-radius: 5vh;
 
 
     display: flex;
@@ -53,7 +53,7 @@ p.card {
     text-align: center;
     color: var(--accent-color);
 
-    font-size: 2vh;
+    font-size: 2.2vh;
     font-family: iknowaghost;
     letter-spacing: -2px;
 }
@@ -68,6 +68,8 @@ img.song {
     height: 100px;
     width: 100px;
     margin-right: 1vw;
+
+    border-radius: 2vh;
 }
 
 div.song {
@@ -79,6 +81,9 @@ div.song {
     display: flex;
 
     background-color: var(--bg-color-2);
+
+    border: 0.5vh solid var(--accent-color);
+    border-radius: 3vh;
 }
 
 div.song-title {
