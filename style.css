@@ -1,7 +1,9 @@
 :root {
     --bg-color-1: rgb(201, 144, 97);
-    --bg-color-2: rgb(214, 185, 172);
-    --accent-color: rgb(94, 110, 89);
+    --bg-color-2: rgba(0, 0, 0, 0.5);
+    --accent-color-1: rgb(255, 255, 255);
+    --accent-color-2: rgba(0, 0, 0, 0.5);
+    --shadow-light: rgb(255,255,255);
 }
 
 * {
@@ -22,7 +24,41 @@
 
 
 body {
-    background-color:var(--bg-color-1);
+    animation-name: bgcolor;
+    animation-iteration-count: infinite;
+    animation-duration: 5s;
+
+}
+
+img.icon {
+    width: 70%;
+    height: 70%;
+}
+
+div.iconTray {
+
+
+    height:8vh;
+    width:100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.icon {
+    height: 6vh;
+    width: 6vh;
+    background-color: var(--accent-color-2);
+
+    border: 0.5vh solid var(--accent-color-1);
+    border-radius: 100%;
+    margin-inline: 0.3vh;
+
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+    filter: drop-shadow(0px 0px 8px var(--shadow-light))
 }
 
 div.card {
@@ -35,12 +71,13 @@ div.card {
     margin:0;
     transform: translate(-50%, -50%);
 
-    padding: 2%;
+    padding: 2vh;
     padding-inline: 5%;
     
-    border: 0.5vh solid var(--accent-color);
+    border: 0.5vh solid var(--accent-color-1);
     border-radius: 5vh;
 
+    filter: drop-shadow(0px 0px 8px var(--shadow-light));
 
     display: flex;
     flex-wrap:wrap;
@@ -51,17 +88,21 @@ div.card {
 
 p.card {
     text-align: center;
-    color: var(--accent-color);
+    color: var(--accent-color-1);
 
     font-size: 2.2vh;
     font-family: iknowaghost;
     letter-spacing: -2px;
+
+    filter: drop-shadow(0px 0px 8px var(--shadow-light));
 }
 
 h1.card {
     font-size: 5vh;
     font-family: chomsky;
-    color: var(--accent-color);
+    color: var(--accent-color-1);
+
+    filter: drop-shadow(0px 0px 8px var(--shadow-light));
 }
 
 img.song {
@@ -74,21 +115,22 @@ img.song {
 
 div.song {
     position: fixed;
-    bottom: 15px;
-    right: 15px;
-    padding: 1%;
+    bottom: 1vh;
+    right: 1vh;
+    padding: 1vh;
 
     display: flex;
 
     background-color: var(--bg-color-2);
 
-    border: 0.5vh solid var(--accent-color);
+    border: 0.5vh solid var(--accent-color-1);
     border-radius: 3vh;
+
+    filter: drop-shadow(0px 0px 8px var(--shadow-light));
 }
 
 div.song-title {
     display: flex;
-    background-color: var(--bg-color-2);
     flex-wrap: wrap;
     justify-content: flex-start;
     align-items: center;
@@ -99,10 +141,22 @@ div.song-title {
 p.song-title {
 
     font-size: 2rem;
-    color: var(--accent-color);
+    color: var(--accent-color-1);
     font-family: iknowaghost;
 }
 
+@keyframes float {
+    0% {letter-spacing:normal}
+    50% {letter-spacing: 5px;}
+    100% {letter-spacing: normal;}
+
+}
+
+@keyframes bgcolor {
+    0% {background-color: black;}
+    50% {background-color: rgb(44, 44, 44);}
+    100% {background-color: black;}
+}
 
     /* media queries */
 
