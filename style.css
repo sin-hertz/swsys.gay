@@ -30,9 +30,29 @@ body {
 
 }
 
+div.cover {
+    position:absolute;
+    top:0%;
+    left:0%;
+    width:100%;
+    height:100%;
+    background-color: rgba(0, 0, 0, 0);
+    z-index:10000;
+    backdrop-filter: blur(15px);
+
+    display:flex;
+    align-items: center;
+    justify-content:center;
+}
+
+
 img.icon {
     width: 70%;
     height: 70%;
+    z-index:2000;
+    position: relative;
+    top:15%;
+    left:15%;
 }
 
 div.iconTray {
@@ -58,8 +78,28 @@ div.icon {
     justify-content: center;
     align-items: center;
 
-    filter: drop-shadow(0px 0px 8px var(--shadow-light))
+    filter: drop-shadow(0px 0px 8px var(--shadow-light));
+
+    position:relative;
 }
+
+.link-spanner{
+  position:absolute; 
+  width:100%;
+  height:100%;
+  top:0;
+  left: 0;
+  z-index: 1;
+}
+
+a.icon {
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+
 
 div.card {
     background-color: var(--bg-color-2);
@@ -71,8 +111,8 @@ div.card {
     margin:0;
     transform: translate(-50%, -50%);
 
-    padding: 2vh;
-    padding-inline: 5%;
+    padding-top: 2vh;
+    padding-bottom: 1vh;
     
     border: 0.5vh solid var(--accent-color-1);
     border-radius: 5vh;
@@ -81,10 +121,18 @@ div.card {
 
     display: flex;
     flex-wrap:wrap;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    row-gap: 2em;
+    row-gap: 1em;
+
+    /* transition: transform 0.2s ease-out;
+    FIX TS TWIN ^^ */
 }
+
+/* .card:hover {
+    transform:translate(-50%,-50%) scale(1.02);
+} */
 
 p.card {
     text-align: center;
@@ -95,6 +143,8 @@ p.card {
     letter-spacing: -2px;
 
     filter: drop-shadow(0px 0px 8px var(--shadow-light));
+
+    width:100%;
 }
 
 h1.card {
@@ -103,7 +153,16 @@ h1.card {
     color: var(--accent-color-1);
 
     filter: drop-shadow(0px 0px 8px var(--shadow-light));
+
+    animation-name: float;
+    animation-iteration-count: infinite;
+    animation-duration: 5s;
 }
+
+h1.cover{
+    font-size: 7vh;
+}
+
 
 img.song {
     height: 100px;
@@ -180,7 +239,7 @@ p.song-title {
 
 @media (min-width: 1280px) {
     div.card {
-        width: 60%;
+        width: 40%;
     }
 }
 
