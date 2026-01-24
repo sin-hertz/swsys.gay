@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>snhz audio setup</title>
     <link rel="stylesheet" href="music.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
     <div class="main">
@@ -16,7 +17,44 @@
             $ case - kz abs <br>
             $ dac - jcally jm12 w/ ja11 firmware<br>
             $ soulseek user (library) - sn<br>
+            <br>
+            ⁠♡ 100 gecs<br>
+            ♡ 2hollis<br>
+            ♡ aphex twin<br>
+            ♡ hkmori<br>
+            ♡ goreshit<br>
         </p>
     </div>
+
+    <button id="btn">afx - 14 cornish spreek 5b</button>
+    <audio id="song" src="audio/14CornishSpreek5b.mp3">aphex twin - 14 cornish spreek 5b</audio>
+
+    <script>
+  
+        var isPlaying
+        var song
+        let controlButton = document.getElementById("btn")
+
+        controlButton.addEventListener("click", playPause)
+
+        function playPause() {
+            if (isPlaying == false) {
+                song.play()
+                isPlaying = true
+                controlButton.innerHTML = "PAUSE"
+            } else if(isPlaying == true) {
+                song.pause()
+                isPlaying = false
+                controlButton.innerHTML = "PLAY"
+            } else if(typeof(isPlaying) == 'undefined'){
+                //init
+                isPlaying = false
+                song = document.createElement('audio')
+                song.src = "audio/14CornishSpreek5b.mp3"
+                playPause()
+            }
+        }
+    </script>
+
 </body>
 </html>
